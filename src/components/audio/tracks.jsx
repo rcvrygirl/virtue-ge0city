@@ -17,7 +17,7 @@ export default function Track() {
 
   return (
     <div>
-        <audio className="music-player" ref={audioRef} src={audioFile} controls />
+        <audio className="music-player" ref={audioRef} src={audioFile} controls loop />
     </div>
   )
 }
