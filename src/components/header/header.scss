@@ -23,6 +23,10 @@
       font-weight: 700;
       text-decoration: none;
     }
+
+    &__hidden {
+      display: none;
+    }
   
     &__nav-item {
       position: relative;

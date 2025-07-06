@@ -1,10 +1,12 @@
 import { useState } from 'react';
+import { useScroll } from '../../hooks/useScroll';
 import './header.scss';
 import bgHome from '../../assets/saturn.png';
 
 import './header.scss'; // SCSS styles
 
 const Header = () => {
+  const isScrolled = useScroll();
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Navigation items with permanent background images
   const navItems = [
@@ -16,7 +18,9 @@ const Header = () => {
       <div className="header__container">
         {/* Logo */}
         <div className="header__logo">
+        <div className={`${isScrolled ? 'header__hidden' : 'header__logo'}`}>
           <a href="/">Berry me in the realm of release...</a>
+        </div>
         </div>
 
         {/* Navigation with permanent backgrounds */}
