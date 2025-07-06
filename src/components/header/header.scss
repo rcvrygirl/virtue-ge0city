@@ -45,12 +45,12 @@
         opacity: 0.9; // Adjust for readability
       }
   
-      // hover enhancement
-      &:hover::before {
-        opacity: 1;
-        transform: scale(1.02);
-        transition: all 0.3s ease;
-      }
+      // hover enhancements
+      // &:hover::before {
+      //   opacity: 1;
+      //   transform: scale(1.02);
+      //   transition: all 0.3s ease;
+      // }
     }
   
     &__nav {
@@ -62,10 +62,6 @@
         color: white;
         text-decoration: none;
         transition: color 0.3s;
-  
-        &:hover {
-          color: pink;
-        }
       }
     }
   
@@ -125,4 +121,3 @@
       }
     }
   }
-  
