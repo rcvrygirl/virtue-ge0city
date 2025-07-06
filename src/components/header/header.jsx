@@ -1,0 +1,70 @@
+import { useState } from 'react';
+import './header.scss';
+import bgHome from '../../assets/saturn.png';
+
+import './header.scss'; // SCSS styles
+
+const Header = () => {
+  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  // Navigation items with permanent background images
+  const navItems = [
+    { id: 1, text: 'Home Planet', bgImage: bgHome },
+  ];
+
+  return (
+    <header className="header">
+      <div className="header__container">
+        {/* Logo */}
+        <div className="header__logo">
+          <a href="/">Berry me in the realm of release...</a>
+        </div>
+
+        {/* Navigation with permanent backgrounds */}
+        <nav className="header__nav">
+          <ul>
+            {navItems.map((item) => (
+              <li 
+                key={item.id}
+                className="header__nav-item"
+                style={{ 
+                  '--bg-image': `url(${item.bgImage})`,
+                  '--text-color': '#fff', // Adjust based on image brightness
+                }}
+              >
+                <a href={`#${item.text.toLowerCase()}`}>{item.text}</a>
+              </li>
+            ))}
+          </ul>
+        </nav>
+
+        {/* Mobile Menu Button */}
+        <button 
+          className="header__hamburger"
+          onClick={() => setIsMenuOpen(!isMenuOpen)}
+        >
+          ☰
+        </button>
+
+        {/* Mobile Menu Overlay */}
+        {isMenuOpen && (
+          <div className="header__mobile-menu">
+            <button 
+              className="header__close-btn"
+              onClick={() => setIsMenuOpen(false)}
+            >
+              ×
+            </button>
+            <ul>
+              <li><a href="/" onClick={() => setIsMenuOpen(false)}>Home Planet</a></li>
+              <li><a href="/about" onClick={() => setIsMenuOpen(false)}>Writing</a></li>
+              <li><a href="/services" onClick={() => setIsMenuOpen(false)}>Links</a></li>
+              <li><a href="/contact" onClick={() => setIsMenuOpen(false)}>Guestbook</a></li>
+            </ul>
+          </div>
+        )}
+      </div>
+    </header>
+  );
+};
+
+export default Header;

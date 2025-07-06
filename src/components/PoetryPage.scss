@@ -1,7 +1,23 @@
 .chi {
     float: right;
-    position: absolute;
+    position: fixed;
     bottom: 46px;
     right: 20px;
     z-index: 10001;
+
+    @media (max-width: 768px) {
+      z-index: -1;
+    }
+}
+
+body { background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/pinkhairgirl.jpg') center/cover no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  
+  /* Ensure full viewport coverage */
+  width: 100vw;
+  height: 100vh; /* Use min-height: 100vh if content exceeds screen */
 }
