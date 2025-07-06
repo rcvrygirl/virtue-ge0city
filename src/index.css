@@ -4,6 +4,9 @@
   cursor: url('./assets/clover.png'), auto;
   a:hover {
     cursor: url('./assets/spatter.png'), pointer;
+  };
+  img:hover {
+    cursor: url('./assets/spatter.png'), pointer;
   }
 }
 
