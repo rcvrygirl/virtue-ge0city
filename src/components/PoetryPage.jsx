@@ -9,7 +9,7 @@ function PoetryPage() {
         <div>
             <img className="chi" src={chiStar} width="300" />
             <Poetry></Poetry>
-            <Track></Track>
+            <Track trackId="1"></Track>
         </div>
     )
 
