@@ -53,11 +53,12 @@
   
   button {
     padding: 10px 15px;
-    background: #007bff;
+    background: lightblue;
     color: white;
     border: none;
     border-radius: 4px;
     cursor: pointer;
+    width: 25%;
   }
   
   button:disabled {

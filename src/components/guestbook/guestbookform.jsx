@@ -54,7 +54,7 @@ const GuestbookForm = () => {
         />
       </div>
 
-      <button type="submit" disabled={isSubmitting}>
+      <button className="submit-button" type="submit" disabled={isSubmitting}>
         {isSubmitting ? 'Submitting...' : 'Submit'}
       </button>
 

@@ -17,6 +17,11 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
   },
   {
+    path: "/homeplanet",
+    element: <App />,
+    errorElement: <ErrorPage />,
+  },
+  {
     path: "guestbook",
     element: <Guestbook />,
   },
