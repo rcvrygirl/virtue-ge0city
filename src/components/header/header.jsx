@@ -63,8 +63,6 @@ const Header = () => {
             <ul>
               <li><a href="/" onClick={() => setIsMenuOpen(false)}>Home Planet</a></li>
               <li><a href="/guestbook" onClick={() => setIsMenuOpen(false)}>Guest book</a></li>
-              <li><a href="/services" onClick={() => setIsMenuOpen(false)}>Links</a></li>
-              <li><a href="/contact" onClick={() => setIsMenuOpen(false)}>Guestbook</a></li>
             </ul>
           </div>
         )}
