@@ -10,6 +10,12 @@
     }
 }
 
+h1 {
+  margin-left: 40px;
+  top: 0;
+  // position: sticky;
+}
+
 body { background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../assets/pinkhairgirl.jpg') center/cover no-repeat;
@@ -26,5 +32,11 @@ body { background:
     width: 100%;
     min-width: 100%;
     height: auto;
+  }
+}
+
+.mobile {
+  @media (max-width: 768px) {
+    display: hidden;
   }
 }

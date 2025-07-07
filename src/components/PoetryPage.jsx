@@ -7,9 +7,10 @@ import './PoetryPage.scss'
 function PoetryPage() {
     return (
         <div>
+            <h1><a href="/">Berry me in the realm of release...</a></h1>
             <img className="chi" src={chiStar} width="300" />
             <Poetry></Poetry>
-            <Track trackId="1"></Track>
+            <Track classname="mobile" trackId="1"></Track>
         </div>
     )
 

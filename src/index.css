@@ -1,6 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
 
 * {
+  font-family: "Kirang Haerang", system-ui;
   cursor: url('./assets/clover.png'), auto;
   a:hover {
     cursor: url('./assets/spatter.png'), pointer;

@@ -2,6 +2,7 @@ import { useState } from 'react';
 import { useScroll } from '../../hooks/useScroll';
 import './header.scss';
 import bgHome from '../../assets/saturn.png';
+import books from '../../assets/books-icon.png'
 
 import './header.scss'; // SCSS styles
 
@@ -11,6 +12,7 @@ const Header = () => {
   // Navigation items with permanent background images
   const navItems = [
     { id: 1, text: 'Home Planet', bgImage: bgHome },
+    { id: 2, text: 'Guest Book', bgImage: books}
   ];
 
   return (
@@ -19,7 +21,7 @@ const Header = () => {
         {/* Logo */}
         <div className="header__logo">
         <div className={`${isScrolled ? 'header__hidden' : 'header__logo'}`}>
-          <a href="/">Berry me in the realm of release...</a>
+          {/* <a href="/">Berry me in the realm of release...</a> */}
         </div>
         </div>
 
@@ -35,7 +37,7 @@ const Header = () => {
                   '--text-color': '#fff', // Adjust based on image brightness
                 }}
               >
-                <a href={`#${item.text.toLowerCase()}`}>{item.text}</a>
+                <a href={`${item.text.toLowerCase().replace(/ /g, '')}`}>{item.text}</a>
               </li>
             ))}
           </ul>
@@ -60,7 +62,7 @@ const Header = () => {
             </button>
             <ul>
               <li><a href="/" onClick={() => setIsMenuOpen(false)}>Home Planet</a></li>
-              <li><a href="/about" onClick={() => setIsMenuOpen(false)}>Writing</a></li>
+              <li><a href="/guestbook" onClick={() => setIsMenuOpen(false)}>Guest book</a></li>
               <li><a href="/services" onClick={() => setIsMenuOpen(false)}>Links</a></li>
               <li><a href="/contact" onClick={() => setIsMenuOpen(false)}>Guestbook</a></li>
             </ul>
