@@ -9,7 +9,7 @@ const Guestbook = () => {
     <Header />
     <div className="guestbook-container">
       <div className="guestbook-title">
-      <h1>Sweet Nothings</h1>
+      <h1 className="blood-spatter">Sweet Nothings</h1>
       <p>Leave a message for others to see!</p>
       </div>
       
