@@ -9,6 +9,7 @@ import {
 } from "react-router-dom";
 import Guestbook from './components/guestbook/guestbook';
 import ErrorPage from './components/error/page-not-found';
+import TumblrPage from './components/tumblr/TumblrPage';
 
 const router = createBrowserRouter([
   {
@@ -24,6 +25,10 @@ const router = createBrowserRouter([
   {
     path: "guestbook",
     element: <Guestbook />,
+  },
+  {
+    path: "tumblr",
+    element: <TumblrPage />,
   },
 ]);
 

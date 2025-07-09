@@ -2,6 +2,7 @@ import Header from '../header/header';
 import './guestbook.scss'; // For styling
 import GuestbookEntries from './guestbookentries';
 import GuestBookForm from './guestbookform';
+import witch from '../../assets/witch.png'
 
 const Guestbook = () => {
   return (
@@ -18,6 +19,7 @@ const Guestbook = () => {
         <GuestbookEntries />
       </div>
     </div>
+    <img src={witch} />
     </>
   );
 };
