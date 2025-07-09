@@ -13,7 +13,7 @@
     }
 }
 .guestbook-title {
-    color: white;
+    color: #F0F0F0; 
    
     h1 {
       margin-left: 0;
@@ -98,7 +98,7 @@
   }
   
   .entry {
-    background: white;
+    background: #F0F0F0;
     background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../../assets/black-grey-stripes.jpg') center/cover no-repeat;
@@ -116,11 +116,11 @@
   
   .entry-name {
     font-weight: bold;
-    color: white;
+    color: #F0F0F0;
     margin-bottom: 5px;
   }
   
   .entry-date {
     font-size: 0.8em;
-    color: white;
+    color: #F0F0F0;
   }
