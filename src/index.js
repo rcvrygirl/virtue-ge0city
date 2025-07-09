@@ -27,7 +27,7 @@ const router = createBrowserRouter([
     element: <Guestbook />,
   },
   {
-    path: "toppicks",
+    path: "todaystoppicz",
     element: <TumblrPage />,
   },
 ]);
