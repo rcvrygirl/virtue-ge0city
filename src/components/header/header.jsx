@@ -3,6 +3,7 @@ import { useScroll } from '../../hooks/useScroll';
 import './header.scss';
 import bgHome from '../../assets/saturn.png';
 import books from '../../assets/books-icon.png'
+import tumblr from '../../assets/blood1.png'
 
 import './header.scss'; // SCSS styles
 
@@ -12,7 +13,8 @@ const Header = () => {
   // Navigation items with permanent background images
   const navItems = [
     { id: 1, text: 'Home Planet', bgImage: bgHome },
-    { id: 2, text: 'Guest Book', bgImage: books}
+    { id: 3, text: 'Top Picks', bgImage: tumblr},
+    { id: 2, text: 'Guest Book', bgImage: books},
   ];
 
   return (
