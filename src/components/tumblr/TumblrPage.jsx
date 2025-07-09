@@ -8,9 +8,6 @@ function TumblrPage() {
     return (
         <div>
             <Header />
-            <div className="tumblr-header">
-                <h1>Today's top picks!</h1>
-            </div>
             <Tumblr />
         </div>
     )

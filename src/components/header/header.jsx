@@ -12,8 +12,8 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Navigation items with permanent background images
   const navItems = [
+    { id: 3, text: 'Todays Top Picz', bgImage: tumblr},
     { id: 1, text: 'Home Planet', bgImage: bgHome },
-    { id: 3, text: 'Top Picks', bgImage: tumblr},
     { id: 2, text: 'Guest Book', bgImage: books},
   ];
 
@@ -23,7 +23,6 @@ const Header = () => {
         {/* Logo */}
         <div className="header__logo">
         <div className={`${isScrolled ? 'header__hidden' : 'header__logo'}`}>
-          {/* <a href="/">Berry me in the realm of release...</a> */}
         </div>
         </div>
 
