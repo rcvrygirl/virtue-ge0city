@@ -12,7 +12,6 @@ function TumblrPage() {
                 <h1>Today's top picks!</h1>
             </div>
             <Tumblr />
-            <Track classname="mobile" trackId="2"></Track>
         </div>
     )
 
