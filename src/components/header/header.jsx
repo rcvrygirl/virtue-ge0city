@@ -63,7 +63,8 @@ const Header = () => {
             </button>
             <ul>
               <li><a href="/" onClick={() => setIsMenuOpen(false)}>Home Planet</a></li>
-              <li><a href="/guestbook" onClick={() => setIsMenuOpen(false)}>Guest book</a></li>
+              <li><a href="/guestbook" onClick={() => setIsMenuOpen(false)}>Guest Book</a></li>
+              <li><a href="/guestbook" onClick={() => setIsMenuOpen(false)}>Fake Tumblr</a></li>
             </ul>
           </div>
         )}
