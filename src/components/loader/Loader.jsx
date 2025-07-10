@@ -28,7 +28,6 @@ export default function Loader({ children }) {
     return (
       <div className="loader-overlay">
         <div className="loader-spinner"></div>
-        <p>Please hold...</p>
       </div>
     );
   }
