@@ -15,8 +15,8 @@ const Header = () => {
   const navItems = [
     { id: 3, text: 'Todays Top Picz', bgImage: tumblr},
     { id: 1, text: 'Home Planet', bgImage: bgHome },
-    { id: 2, text: 'Library', bgImage: library},
     { id: 4, text: 'Guestbook', bgImage: books },
+    { id: 2, text: 'Library', bgImage: library},
   ];
 
   return (
