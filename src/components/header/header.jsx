@@ -4,6 +4,7 @@ import './header.scss';
 import bgHome from '../../assets/saturn.png';
 import books from '../../assets/books-icon.png'
 import tumblr from '../../assets/blood1.png'
+import library from '../../assets/book-icon.png'
 
 import './header.scss'; // SCSS styles
 
@@ -14,6 +15,7 @@ const Header = () => {
   const navItems = [
     { id: 3, text: 'Todays Top Picz', bgImage: tumblr},
     { id: 1, text: 'Home Planet', bgImage: bgHome },
+    { id: 4, text: 'Library', bgImage: library },
     { id: 2, text: 'Guest Book', bgImage: books},
   ];
 
