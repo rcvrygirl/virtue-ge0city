@@ -1,0 +1,27 @@
+.library-container {
+    width: 100%;
+    height: calc(100vh - 120px);
+    box-sizing: border-box;
+    border: 1px solid #333;
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/strangefriendscaptive2.jpg') no-repeat;
+    background-size: cover;
+
+    //option 2
+    // width: 100%;
+    // height: calc(100vh - 120px);
+    // // box-sizing: border-box;
+    // // border: 1px solid #333;
+    // background: 
+    // // linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    // url('../../assets/strangefriendscaptive2.jpg') center no-repeat;
+    // background-size: contain;
+
+    a {
+        color: white;
+    }
+    ul {
+        color: yellow;
+    }
+}

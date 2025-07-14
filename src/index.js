@@ -10,6 +10,7 @@ import {
 import Guestbook from './components/guestbook/guestbook';
 import ErrorPage from './components/error/page-not-found';
 import TumblrPage from './components/tumblr/TumblrPage';
+import LibraryPage from './components/library/LibraryPage';
 
 const router = createBrowserRouter([
   {
@@ -29,6 +30,10 @@ const router = createBrowserRouter([
   {
     path: "todaystoppicz",
     element: <TumblrPage />,
+  },
+  {
+    path: "library",
+    element: <LibraryPage />,
   },
 ]);
 
