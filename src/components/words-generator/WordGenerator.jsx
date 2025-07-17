@@ -6,13 +6,21 @@ import './WordGenerator.scss';
 const WordGenerator = () => {
   const [phraseStructure, setPhraseStructure] = useState('adjective-noun');
   const [generatedPhrase, setGeneratedPhrase] = useState('');
-  const [savedPhrases, setSavedPhrases] = useState([]);
   const [history, setHistory] = useState([]);
   const [options, setOptions] = useState({
     capitalize: true,
     addNumber: false
   });
   const [isLoading, setIsLoading] = useState(true);
+  const [savedPhrases, setSavedPhrases] = useState(() => {
+    try {
+      const saved = localStorage.getItem('savedPhrases');
+      return saved ? JSON.parse(saved) : [];
+    } catch (error) {
+      console.error("Failed to parse saved phrases", error);
+      return [];
+    }
+  });
 
   useEffect(() => {
     // Verify data is loaded correctly
@@ -22,6 +30,10 @@ const WordGenerator = () => {
       console.error('Word data failed to load');
     }
   }, []);
+  
+  useEffect(() => {
+    localStorage.setItem('savedPhrases', JSON.stringify(savedPhrases));
+  }, [savedPhrases]);
 
   const generateRandomWord = (category) => {
     try {
@@ -95,7 +107,7 @@ const WordGenerator = () => {
     setHistory(prev => prev.filter((_, index) => index !== indexToDelete));
   };
 
-  // Save a phrase
+  // Save phrase
   const savePhrase = (phrase) => {
     if (!savedPhrases.includes(phrase)) {
       setSavedPhrases(prev => [...prev, phrase]);
