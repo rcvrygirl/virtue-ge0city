@@ -30,7 +30,7 @@ const WordGenerator = () => {
       console.error('Word data failed to load');
     }
   }, []);
-  
+
   useEffect(() => {
     localStorage.setItem('savedPhrases', JSON.stringify(savedPhrases));
   }, [savedPhrases]);
@@ -262,13 +262,14 @@ const WordGenerator = () => {
 {history.length > 0 && (
         <div className="history">
             <div> 
-            <h3>Recent Creations</h3>
-            {/* <button 
-                className="clear-all-button"
-                onClick={() => setHistory([])}
-            >
-            Clear All
-            </button> */}
+                <h3>
+                    Recent Creations
+                <button 
+                    className="clear-all-button"
+                    onClick={() => setHistory([])}>
+                    Clear All
+                </button>
+                </h3>
             </div>
           <ul>
             {history.map((phrase, index) => (

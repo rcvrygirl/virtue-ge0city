@@ -9,6 +9,12 @@
   img:hover {
     cursor: url('./assets/spatter.png'), pointer;
   }
+  button:hover {
+    cursor: url('./assets/spatter.png'), pointer;
+  };
+  label:hover {
+    cursor: url('./assets/spatter.png'), pointer;
+  };
 }
 
 body {
