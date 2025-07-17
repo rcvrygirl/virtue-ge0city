@@ -13,7 +13,7 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Navigation items with permanent background images
   const navItems = [
-    { id: 3, text: 'Todays Top Picz', bgImage: tumblr},
+    // { id: 3, text: 'Todays Top Picz', bgImage: tumblr},
     { id: 1, text: 'Home Planet', bgImage: bgHome },
     { id: 4, text: 'Guestbook', bgImage: books },
     { id: 2, text: 'Library', bgImage: library},

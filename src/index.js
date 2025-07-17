@@ -11,6 +11,7 @@ import Guestbook from './components/guestbook/guestbook';
 import ErrorPage from './components/error/page-not-found';
 import TumblrPage from './components/tumblr/TumblrPage';
 import LibraryPage from './components/library/LibraryPage';
+import WordGeneratorPage from './components/words-generator/WordGeneratorPage'
 
 const router = createBrowserRouter([
   {
@@ -34,6 +35,10 @@ const router = createBrowserRouter([
   {
     path: "library",
     element: <LibraryPage />,
+  },
+  {
+    path: "words",
+    element: <WordGeneratorPage />
   },
 ]);
 

@@ -1,0 +1,292 @@
+import { useState, useEffect } from 'react';
+import wordsData from '../../db/words.json';
+import WordDisplay from './WordDisplay';
+import './WordGenerator.scss';
+
+const WordGenerator = () => {
+  const [phraseStructure, setPhraseStructure] = useState('adjective-noun');
+  const [generatedPhrase, setGeneratedPhrase] = useState('');
+  const [savedPhrases, setSavedPhrases] = useState([]);
+  const [history, setHistory] = useState([]);
+  const [options, setOptions] = useState({
+    capitalize: true,
+    addNumber: false
+  });
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    // Verify data is loaded correctly
+    if (wordsData?.categories) {
+      setIsLoading(false);
+    } else {
+      console.error('Word data failed to load');
+    }
+  }, []);
+
+  const generateRandomWord = (category) => {
+    try {
+      if (!wordsData?.categories?.[category]) {
+        console.error(`Category "${category}" not found`);
+        return 'unknown';
+      }
+      
+      const words = wordsData.categories[category];
+      if (!words?.length) {
+        console.error(`No words found in category "${category}"`);
+        return 'unknown';
+      }
+      
+      return words[Math.floor(Math.random() * words.length)];
+    } catch (error) {
+      console.error('Error generating word:', error);
+      return 'error';
+    }
+  };
+
+  const generatePhrase = () => {
+    if (isLoading) return;
+
+    let phrase = '';
+    
+    try {
+      switch (phraseStructure) {
+        case 'noun-preposition-adjective-noun':
+          phrase = `${generateRandomWord('nouns')} ${generateRandomWord('prepositions')} ${generateRandomWord('adjectives')} ${generateRandomWord('nouns')}`;
+          break;
+        case 'adjective-noun':
+          phrase = `${generateRandomWord('adjectives')} ${generateRandomWord('nouns')}`;
+          break;
+        case 'verb-noun':
+          phrase = `${generateRandomWord('verbs')} ${generateRandomWord('nouns')}`;
+          break;
+        default:
+          phrase = `${generateRandomWord('adjectives')} ${generateRandomWord('nouns')}`;
+      }
+
+      // Apply options
+      if (options.capitalize) {
+        phrase = phrase.split(' ')
+          .map(word => word.charAt(0).toUpperCase() + word.slice(1))
+          .join(' ');
+      }
+      
+      if (options.addNumber) {
+        const randomNum = Math.floor(Math.random() * 10) + 1;
+        phrase += ` ${randomNum}`;
+      }
+      
+      setGeneratedPhrase(phrase);
+      setHistory(prev => [phrase, ...prev].slice(0, 10));
+    } catch (error) {
+      console.error('Error generating phrase:', error);
+      setGeneratedPhrase('Error generating phrase');
+    }
+  };
+
+  const handleOptionChange = (e) => {
+    const { name, value, type, checked } = e.target;
+    setOptions(prev => ({
+      ...prev,
+      [name]: type === 'checkbox' ? checked : value
+    }));
+  };
+
+  const deletePhrase = (indexToDelete) => {
+    setHistory(prev => prev.filter((_, index) => index !== indexToDelete));
+  };
+
+  // Save a phrase
+  const savePhrase = (phrase) => {
+    if (!savedPhrases.includes(phrase)) {
+      setSavedPhrases(prev => [...prev, phrase]);
+    }
+  };
+
+  // Remove saved phrase
+  const removeSavedPhrase = (index) => {
+    setSavedPhrases(prev => prev.filter((_, i) => i !== index));
+  };
+
+  // Export saved phrases
+  const exportPhrases = () => {
+    const phrasesText = savedPhrases.join(', ');
+    const blob = new Blob([phrasesText], { type: 'text/plain' });
+    const url = URL.createObjectURL(blob);
+    const a = document.createElement('a');
+    a.href = url;
+    a.download = 'my-saved-phrases.txt';
+    document.body.appendChild(a);
+    a.click();
+    document.body.removeChild(a);
+    URL.revokeObjectURL(url);
+  };
+
+  if (isLoading) {
+    return (
+      <div className="generator-container">
+        <div className="generator-card">
+          <div className="loading">Loading word database...</div>
+        </div>
+      </div>
+    );
+  }
+
+  return (
+    <div className="generator-container">
+      <div className="generator-card">
+        <h1>Yugioh Poetry Generator</h1>
+        
+        <div className="controls">
+          <div className="structure-selector">
+            <h3>Phrase Craft:</h3>
+            <div className="structure-options">
+              <label>
+                <input
+                  type="radio"
+                  name="structure"
+                  value="noun-preposition-adjective-noun"
+                  checked={phraseStructure === 'noun-preposition-adjective-noun'}
+                  onChange={() => setPhraseStructure('noun-preposition-adjective-noun')}
+                />
+                Noun + Preposition + Adjective + Noun
+              </label>
+              
+              <label>
+                <input
+                  type="radio"
+                  name="structure"
+                  value="adjective-noun"
+                  checked={phraseStructure === 'adjective-noun'}
+                  onChange={() => setPhraseStructure('adjective-noun')}
+                />
+                Adjective + Noun
+              </label>
+              
+              <label>
+                <input
+                  type="radio"
+                  name="structure"
+                  value="verb-noun"
+                  checked={phraseStructure === 'verb-noun'}
+                  onChange={() => setPhraseStructure('verb-noun')}
+                />
+                Verb + Noun
+              </label>
+            </div>
+          </div>
+          
+          {/* <div className="options">
+            <label className="option">
+              <input
+                type="checkbox"
+                name="capitalize"
+                checked={options.capitalize}
+                onChange={handleOptionChange}
+              />
+              Capitalize Words
+            </label>
+            
+            <label className="option">
+              <input
+                type="checkbox"
+                name="addNumber"
+                checked={options.addNumber}
+                onChange={handleOptionChange}
+              />
+              Add Random Number
+            </label>
+          </div> */}
+          
+          <button 
+            onClick={generatePhrase} 
+            className="generate-button"
+            disabled={isLoading}
+          >
+            Summon
+          </button>
+        </div>
+        {/* TODO do something magic with this later, make it do like a fun presentation of new words animation */}
+        {/* <WordDisplay word={generatedPhrase} /> */}
+
+        {/* Saved Phrases Section */}
+      {savedPhrases.length > 0 && (
+        <div className="saved-phrases">
+          <div className="section-header">
+            <h3>Saved Phrases ({savedPhrases.length})</h3>
+          </div>
+          <ul>
+            {savedPhrases.map((phrase, index) => (
+              <li key={index}>
+                <span>{phrase}</span>
+                <div className="phrase-actions">
+                  <button 
+                    className="save-btn saved"
+                    onClick={() => removeSavedPhrase(index)}
+                    aria-label={`Remove ${phrase}`}
+                  >
+                    ✓ Saved
+                  </button>
+                  <button 
+                    className="delete-button"
+                    onClick={() => removeSavedPhrase(index)}
+                    aria-label={`Delete ${phrase}`}
+                  >
+                    ×
+                  </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+          <button 
+              className="export-button"
+              onClick={exportPhrases}
+              disabled={savedPhrases.length === 0}
+            >
+              Export All
+            </button>
+        </div>
+      )}
+
+{history.length > 0 && (
+        <div className="history">
+            <div> 
+            <h3>Recent Creations</h3>
+            {/* <button 
+                className="clear-all-button"
+                onClick={() => setHistory([])}
+            >
+            Clear All
+            </button> */}
+            </div>
+          <ul>
+            {history.map((phrase, index) => (
+              <li key={index}>
+                <span>{phrase}</span>
+                <div className="phrase-actions">
+                  <button 
+                    className={`save-btn ${savedPhrases.includes(phrase) ? 'saved' : ''}`}
+                    onClick={() => savePhrase(phrase)}
+                    disabled={savedPhrases.includes(phrase)}
+                    aria-label={savedPhrases.includes(phrase) ? 'Already saved' : `Save ${phrase}`}
+                  >
+                    {savedPhrases.includes(phrase) ? '✓ Saved' : 'Save'}
+                  </button>
+                  <button
+          className="delete-button"
+            onClick={() => deletePhrase(index)}
+            aria-label={`Delete phrase: ${phrase}`}
+          >
+            ×
+          </button>
+                </div>
+              </li>
+            ))}
+          </ul>
+        </div>
+      )}
+      </div>
+    </div>
+  );
+};
+
+export default WordGenerator;
