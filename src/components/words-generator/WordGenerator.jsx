@@ -194,6 +194,37 @@ const WordGenerator = () => {
                 />
                 Verb + Noun
               </label>
+
+              <label>
+                <input
+                  type="radio"
+                  name="structure"
+                  value="'noun-prep-noun'"
+                  checked={phraseStructure === 'noun-prep-noun'}
+                  onChange={() => setPhraseStructure('noun-prep-noun')}
+                />
+                Noun + Preposition + Noun
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="structure"
+                  value="noun-noun"
+                  checked={phraseStructure === 'noun-noun'}
+                  onChange={() => setPhraseStructure('noun-noun')}
+                />
+                Noun + Noun
+              </label>
+              <label>
+                <input
+                  type="radio"
+                  name="structure"
+                  value="verb-noun-noun"
+                  checked={phraseStructure === 'verb-noun-noun'}
+                  onChange={() => setPhraseStructure('verb-noun-noun')}
+                />
+                Verb + Noun + Noun
+              </label>
             </div>
           </div>
           
