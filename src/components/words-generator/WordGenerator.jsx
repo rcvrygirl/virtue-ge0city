@@ -72,7 +72,7 @@ const WordGenerator = () => {
           phrase = `${generateRandomWord('verbs')} ${generateRandomWord('nouns')}`;
           break;
         case 'noun-prep-noun':
-          phrase = `${generateRandomWord('nouns')} ${generateRandomWord('prepositions')}${generateRandomWord('nouns')}`;
+          phrase = `${generateRandomWord('nouns')} ${generateRandomWord('prepositions') }${generateRandomWord('nouns')}`;
           break;
         case 'noun-noun':
           phrase = `${generateRandomWord('nouns')} ${generateRandomWord('nouns')}`;
