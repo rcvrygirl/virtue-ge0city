@@ -183,7 +183,7 @@ const WordGenerator = () => {
                 />
                 Adjective + Noun
               </label>
-              
+              <br></br>
               <label>
                 <input
                   type="radio"
