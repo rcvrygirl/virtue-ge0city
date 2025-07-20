@@ -1,7 +1,7 @@
 @import url('https://fonts.googleapis.com/css2?family=Flavors&display=swap');
 
 .header {
-    height: 120px; // strict header size.. for now
+    height: 120px;
     font-family: "Kirang Haerang", system-ui;
     font-weight: 400;
     font-style: normal; 
@@ -16,53 +16,65 @@
       padding: 1rem 2rem;
       max-width: 1200px;
       margin: 0 auto;
+      height: 100%;
+      position: relative; // Added for proper title positioning
     }
-
     &__page-title {
       position: absolute;
       left: 20px;
-      font-size: 1.5rem;
+      font-size: clamp(1rem, 3vw, 1.5rem);
       font-weight: bold;
       color: white;
       text-shadow: 0 0 5px rgba(0,0,0,0.5);
       z-index: 10;
-      pointer-events: none;
-      white-space: nowrap;
-      max-width: 200px;
-      overflow: hidden;
-      text-overflow: ellipsis;
-  
-      @media (max-width: 768px) {
-        position: static;
-        order: -1;
-        margin-right: auto;
-        padding-left: 15px;
+      white-space: normal;
+      max-width: 400px; // Changed from vw to fixed px
+      overflow: visible;
+      margin-right: 20px;
+      word-break: break-word;
+      line-height: 1.2;
+      display: block;
+      /* Explicitly reset any text truncation */
+      -webkit-line-clamp: initial;
+      -webkit-box-orient: initial;
+      
+      @media (max-width: 1024px) {
+        max-width: 300px; // Slightly smaller for tablets
       }
     }
-  
-    &__logo a {
-      color: white;
-      font-size: 2rem;
-      font-weight: 700;
-      text-decoration: none;
-    }
-        // Ensure logo doesn't overlap with title
-    margin-left: 120px;
-    
-    @media (max-width: 768px) {
-      margin-left: 0;
+    &__nav {
+      margin-left: auto; // Push nav to the right
+      padding-left: 150px; // Ensure space for title
+      
+      ul {
+        display: flex;
+        gap: clamp(0.25rem, 1vw, 0.5rem);
+        height: 100%;
+        align-items: center;
+        flex-wrap: nowrap; // Prevent wrapping
+      }
+
+      @media (max-width: 1024px) {
+        padding-left: 120px; // Reduce space on smaller screens
+      }
     }
 
-    &__hidden {
-      display: none;
-    }
-  
     &__nav-item {
       position: relative;
-      padding: 1.5rem 2rem;
       list-style-type: none;
-      
-      // Permanent background
+      height: clamp(60px, 8vh, 80px);
+      min-width: 100px; // Reduced minimum width
+      max-width: 180px; // Added maximum width
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      overflow: hidden;
+      border-radius: 4px;
+      transition: transform 0.2s ease;
+      padding: 0;
+      flex-shrink: 1; // Allow items to shrink if needed
+
+      // Background image container
       &::before {
         content: '';
         position: absolute;
@@ -71,30 +83,65 @@
         width: 100%;
         height: 100%;
         background-image: var(--bg-image);
-        background-size: cover;
+        background-size: 100% auto;
         background-position: center;
+        background-repeat: no-repeat;
         z-index: -1;
         border-radius: 4px;
-        opacity: 0.9; // Adjust for readability
+        opacity: 0.9;
       }
-    }
-  
-    &__nav {
-      
-      ul {
-        display: flex;
-        gap: 0.5rem; // Reduced gap for better image visibility
-      }
-      li a {
+
+      // Text container
+      a {
         color: white;
         text-shadow: 2px 1px black;
         text-decoration: none;
-        transition: color 0.3s;
-        font-size: 1.1em;
+        font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+        white-space: nowrap;
+        padding: 1rem 1.5rem; // Reduced horizontal padding
+        text-align: center;
+        z-index: 1;
+        width: 100%;
+        overflow: hidden;
+      }
+
+      &:hover {
+        transform: scale(1.05);
+      }
+
+      @media (max-width: 1024px) {
+        min-width: 80px;
+        a {
+          padding: 1rem 1rem;
+        }
       }
     }
-  
-    &__hamburger {
+
+    @media (max-width: 900px) {
+      &__nav {
+        padding-left: 100px; // Further reduce space for title
+        
+        &-item {
+          min-width: 70px;
+          a {
+            font-size: 0.9rem;
+            padding: 1rem 0.8rem;
+          }
+        }
+      }
+    }
+
+    @media (max-width: 768px) {
+      &__nav {
+        display: none;
+      }
+
+      &__hamburger {
+        display: block;
+      }
+    }
+
+        &__hamburger {
       display: none;
       background: none;
       border: none;
@@ -115,7 +162,12 @@
       align-items: center;
       justify-content: center;
       z-index: 999;
-  
+      -ms-overflow-style: none;  /* IE and Edge */
+      scrollbar-width: none;  /* Firefox */
+      :-webkit-scrollbar {
+        display: none;
+      }
+
       ul {
         display: flex;
         flex-direction: column;
@@ -149,4 +201,4 @@
         display: block;
       }
     }
-  }
+}

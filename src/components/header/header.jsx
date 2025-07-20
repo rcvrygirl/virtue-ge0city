@@ -62,10 +62,12 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        {/* Page Title - New Element */}
-        <div className="header__page-title">
-          {pageTitle}
-        </div>
+        {/* Page Title */}
+        <div className="header__title-wrapper">
+    <div className="header__page-title">
+      {pageTitle}
+    </div>
+  </div>
 
         {/* Logo */}
         <div className="header__logo">
