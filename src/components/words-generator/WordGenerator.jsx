@@ -171,7 +171,7 @@ const WordGenerator = () => {
         submittedBy: name || "Anonymous",
         userSessionId: localStorage.getItem('userSessionId') || null
       });
-      alert("Submitted to Hall of Fame!");
+      alert("Submitted to Hall of Fame! <3");
     } catch (error) {
       console.error("Submission failed:", error);
     }
