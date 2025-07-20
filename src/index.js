@@ -39,7 +39,7 @@ const router = createBrowserRouter([
     element: <LibraryPage />,
   },
   {
-    path: "words",
+    path: "yugiohpoetrygenerator",
     element: <WordGeneratorPage />
   },
   {
