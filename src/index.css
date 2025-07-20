@@ -2,9 +2,9 @@
 
 * {
   font-family: "Kirang Haerang", system-ui;
-  cursor: url('./assets/clover.png'), auto;
+  /* cursor: url('./assets/clover.png'), 10 10, auto;
   a:hover {
-    cursor: url('./assets/spatter.png'), pointer;
+    cursor: url('./assets/spatter.png'), 10 10, auto;
   };
   img:hover {
     cursor: url('./assets/spatter.png'), pointer;
@@ -14,7 +14,7 @@
   };
   label:hover {
     cursor: url('./assets/spatter.png'), pointer;
-  };
+  }; */
 }
 
 body {
