@@ -9,7 +9,7 @@ export default function Poetry() {
         </li>)
 
     return (
-        <div>
+        <div className="poetry-container">
             <ul className="display-linebreak">{poetryItems}</ul>
         </div>
     )

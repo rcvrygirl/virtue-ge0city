@@ -22,9 +22,9 @@
     &__page-title {
       position: absolute;
       left: 20px;
-      font-size: clamp(1rem, 3vw, 1.5rem);
+      font-size: clamp(1.5rem, 3vw, 1.5rem);
       font-weight: bold;
-      color: white;
+      color: limegreen;
       text-shadow: 0 0 5px rgba(0,0,0,0.5);
       z-index: 10;
       white-space: normal;
@@ -62,7 +62,7 @@
     &__nav-item {
       position: relative;
       list-style-type: none;
-      height: clamp(60px, 8vh, 80px);
+      height: clamp(80px, 8vh, 80px);
       min-width: 100px; // Reduced minimum width
       max-width: 180px; // Added maximum width
       display: flex;
@@ -96,7 +96,8 @@
         color: white;
         text-shadow: 2px 1px black;
         text-decoration: none;
-        font-size: clamp(0.8rem, 1.1vw, 1.1rem);
+        font-size: 17px;
+        // font-size: clamp(0.8rem, 1.1vw, 1.1rem);
         white-space: nowrap;
         padding: 1rem 1.5rem; // Reduced horizontal padding
         text-align: center;

@@ -6,7 +6,7 @@ import library from '../../assets/books-icon.png'
 import tumblr from '../../assets/tumblr-icon.png'
 import books from '../../assets/book-icon.png'
 import hallOfFame from '../../assets/blood1.png'
-import generator from '../../assets/blueboard.jpg'
+import generator from '../../assets/left-clover.png'
 import { useLocation } from 'react-router-dom';
 
 import './header.scss'; // SCSS styles
@@ -20,21 +20,21 @@ const Header = () => {
   // Navigation items with permanent background images
   const navItems = [
     { id: 1, text: 'Home Planet', bgImage: bgHome },
-    { id: 5, text: 'Yugioh Poetry Generator', bgImage: generator},
-    { id: 0, text: 'Hall of Fame', bgImage: hallOfFame},
+    { id: 5, text: 'Yugioh Poetry Generator', bgImage: hallOfFame},
+    { id: 0, text: 'Hall of Fame', bgImage: generator},
     { id: 4, text: 'Guestbook', bgImage: books },
     { id: 2, text: 'Library', bgImage: library},
-    { id: 3, text: 'Images', bgImage: tumblr},
+    { id: 3, text: 'Tumblr', bgImage: tumblr},
   ];
 
   // Map of text-to-router paths for proper matching
   const pathMapping = {
     'homeplanet': '/',
-    'yugiohpoetrygenerator': '/words',
+    'yugiohpoetrygenerator': '/yugiohpoetrygenerator',
     'halloffame': '/halloffame',
     'guestbook': '/guestbook',
     'library': '/library',
-    'images': '/todaystoppicz'
+    'tumblr': '/tumblr'
   };
 
   // Set page title based on current route
