@@ -118,7 +118,10 @@ const Header = () => {
             </button>
             <ul>
               <li><a href="/" onClick={() => setIsMenuOpen(false)}>Home Planet</a></li>
-              <li><a href="/todaystoppicz" onClick={() => setIsMenuOpen(false)}>Fake Tumblr</a></li>
+              <li><a href="/yugiohpoetrygenerator" onClick={() => setIsMenuOpen(false)}>Yugioh Poetry Generator</a></li>
+              <li><a href="/halloffame" onClick={() => setIsMenuOpen(false)}>Hall of Fame</a></li>
+              <li><a href="/tumblr" onClick={() => setIsMenuOpen(false)}>"Tumblr"</a></li>
+              <li><a href="/library" onClick={() => setIsMenuOpen(false)}>Library</a></li>
               <li><a href="/guestbook" onClick={() => setIsMenuOpen(false)}>Guest Book</a></li>
             </ul>
           </div>
