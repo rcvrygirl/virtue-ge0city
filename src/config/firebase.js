@@ -21,4 +21,8 @@ const firebaseConfig = {
 const app = initializeApp(firebaseConfig);
 const db = getFirestore(app);
 
+// const userSubmissionsRef = collection(db, `users/${userId}/submissions`);
+
 export { db };
+
+export const hallOfFameRef = collection(db, "hallOfFame");

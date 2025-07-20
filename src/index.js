@@ -12,6 +12,8 @@ import ErrorPage from './components/error/page-not-found';
 import TumblrPage from './components/tumblr/TumblrPage';
 import LibraryPage from './components/library/LibraryPage';
 import WordGeneratorPage from './components/words-generator/WordGeneratorPage'
+import HallOfFamePage from './components/hall-of-fame/HallOfFamePage';
+import { AuthProvider } from './components/auth/AuthContext';
 
 const router = createBrowserRouter([
   {
@@ -40,13 +42,19 @@ const router = createBrowserRouter([
     path: "words",
     element: <WordGeneratorPage />
   },
+  {
+    path: "halloffame",
+    element: <HallOfFamePage />
+  }
 ]);
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   <React.StrictMode>
+    <AuthProvider>
     <RouterProvider router={router} />
     {/* <App /> */}
+    </AuthProvider>
   </React.StrictMode>
 );
 

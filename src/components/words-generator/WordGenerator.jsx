@@ -2,6 +2,8 @@ import { useState, useEffect } from 'react';
 import wordsData from '../../db/words.json';
 import WordDisplay from './WordDisplay';
 import './WordGenerator.scss';
+import { addDoc, serverTimestamp } from 'firebase/firestore';
+import { hallOfFameRef } from '../../config/firebase';
 
 const WordGenerator = () => {
   const [phraseStructure, setPhraseStructure] = useState('adjective-noun');
@@ -10,7 +12,7 @@ const WordGenerator = () => {
   const [options, setOptions] = useState({
     capitalize: true,
     addNumber: false
-  });
+  })
   const [isLoading, setIsLoading] = useState(true);
   const [savedPhrases, setSavedPhrases] = useState(() => {
     try {
@@ -142,6 +144,53 @@ const WordGenerator = () => {
     document.body.removeChild(a);
     URL.revokeObjectURL(url);
   };
+
+  // hall of fame prep logic 
+
+  const [showUsernameModal, setShowUsernameModal] = useState(false);
+  const [currentPhraseToSubmit, setCurrentPhraseToSubmit] = useState('');
+  const [username, setUsername] = useState(() => {
+    return localStorage.getItem('hallOfFameUsername') || '';
+  });
+
+  const prepareForSubmission = (phrase) => {
+    setCurrentPhraseToSubmit(phrase);
+    if (username) {
+      submitToHallOfFame(phrase, username);
+    } else {
+      setShowUsernameModal(true);
+    }
+  };
+
+  const submitToHallOfFame = async (phrase, name) => {
+    try {
+      await addDoc(hallOfFameRef, {
+        phrase,
+        timestamp: serverTimestamp(),
+        votes: 0,
+        submittedBy: name || "Anonymous",
+        userSessionId: localStorage.getItem('userSessionId') || null
+      });
+      alert("Submitted to Hall of Fame!");
+    } catch (error) {
+      console.error("Submission failed:", error);
+    }
+  };
+
+  const handleUsernameSubmit = (e) => {
+    e.preventDefault();
+    localStorage.setItem('hallOfFameUsername', username);
+    
+    // Generate a unique session ID if none exists
+    if (!localStorage.getItem('userSessionId')) {
+      localStorage.setItem('userSessionId', crypto.randomUUID());
+    }
+    
+    submitToHallOfFame(currentPhraseToSubmit, username);
+    setShowUsernameModal(false);
+  };
+
+  // loading...
 
   if (isLoading) {
     return (
@@ -286,6 +335,14 @@ const WordGenerator = () => {
                   >
                     ×
                   </button>
+                  <button
+                    onClick={() => prepareForSubmission(phrase)}
+                    className="medal-submit-btn"
+                    aria-label="Submit to Hall of Fame"
+                    title="Submit to Hall of Fame"
+                  >
+                    🏅+
+                  </button>
                 </div>
               </li>
             ))}
@@ -297,6 +354,34 @@ const WordGenerator = () => {
             >
               Export All
             </button>
+        </div>
+      )}
+            {/* Username Modal */}
+            {showUsernameModal && (
+        <div className="modal-overlay">
+          <div className="username-modal">
+            <h3>Choose a Display Name</h3>
+            <form onSubmit={handleUsernameSubmit}>
+              <input
+                type="text"
+                value={username}
+                onChange={(e) => setUsername(e.target.value)}
+                placeholder="Your username"
+                required
+                minLength={2}
+                maxLength={20}
+              />
+              <div className="modal-actions">
+                <button type="submit">Submit</button>
+                <button 
+                  type="button" 
+                  onClick={() => setShowUsernameModal(false)}
+                >
+                  Cancel
+                </button>
+              </div>
+            </form>
+          </div>
         </div>
       )}
 

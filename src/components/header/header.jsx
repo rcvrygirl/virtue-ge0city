@@ -3,8 +3,10 @@ import { useScroll } from '../../hooks/useScroll';
 import './header.scss';
 import bgHome from '../../assets/saturn.png';
 import library from '../../assets/books-icon.png'
-import tumblr from '../../assets/blood1.png'
+import tumblr from '../../assets/tumblr-icon.png'
 import books from '../../assets/book-icon.png'
+import hallOfFame from '../../assets/blood1.png'
+import generator from '../../assets/blueboard.jpg'
 
 import './header.scss'; // SCSS styles
 
@@ -13,10 +15,12 @@ const Header = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
   // Navigation items with permanent background images
   const navItems = [
-    // { id: 3, text: 'Todays Top Picz', bgImage: tumblr},
     { id: 1, text: 'Home Planet', bgImage: bgHome },
+    { id: 5, text: 'Yugioh Poetry Generator', bgImage: generator},
+    { id: 0, text: 'Hall of Fame', bgImage: hallOfFame},
     { id: 4, text: 'Guestbook', bgImage: books },
     { id: 2, text: 'Library', bgImage: library},
+    { id: 3, text: 'Images', bgImage: tumblr},
   ];
 
   return (

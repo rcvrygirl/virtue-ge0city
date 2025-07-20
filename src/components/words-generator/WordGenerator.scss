@@ -367,6 +367,124 @@
       }
     }
   }
+
+  /* Modal Styles */
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.username-modal {
+  background: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 90%;
+  max-width: 400px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+
+  h3 {
+    margin-top: 0;
+    color: #333;
+  }
+
+  input {
+    width: 100%;
+    padding: 0.8rem;
+    margin: 1rem 0;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 1rem;
+  }
+
+  .modal-actions {
+    display: flex;
+    justify-content: flex-end;
+    gap: 0.8rem;
+
+    button {
+      padding: 0.6rem 1.2rem;
+      border: none;
+      border-radius: 4px;
+      cursor: pointer;
+
+      &:first-child {
+        background: #4a6cf7;
+        color: white;
+
+        &:hover {
+          background: #3a5bef;
+        }
+      }
+
+      &:last-child {
+        background: #f1f1f1;
+
+        &:hover {
+          background: #e1e1e1;
+        }
+      }
+    }
+  }
+}
+
+/* WordGenerator.scss - Add to existing */
+.hall-of-fame-btn {
+  background: linear-gradient(to right, #ff8a00, #da1b60);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  margin-left: 0.5rem;
+
+  &:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+  }
+
+  &:disabled {
+    background: #ccc;
+    cursor: not-allowed;
+  }
+}
+
+.medal-submit-btn {
+  /* Base styles from above */
+  position: relative;
+  margin-left: 7px;
+  background: lawngreen;
+  
+  &::after {
+    content: attr(aria-label);
+    position: absolute;
+    float: right;
+    bottom: 100%;
+    left: 50%;
+    transform: translateX(-50%);
+    background: #333;
+    color: white;
+    padding: 0.3rem 0.6rem;
+    border-radius: 4px;
+    font-size: 0.8rem;
+    white-space: nowrap;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.2s ease;
+  }
+  
+  &:hover::after {
+    opacity: 1;
+  }
+}
   
   /* Animations */
   @keyframes fadeIn {
