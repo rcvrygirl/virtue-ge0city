@@ -30,7 +30,7 @@ const GuestbookEntries = () => {
 
   return (
     <div className="guestbook-entries">
-      <h2 className="guestbook-title">Guest Memories</h2>
+      <h2 className="guestbook-title">Ghosts of Guests Past...</h2>
       
       {entries.length === 0 ? (
         <p>No messages yet. Be the first to sign!</p>

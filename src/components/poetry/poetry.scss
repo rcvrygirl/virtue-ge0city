@@ -1,11 +1,13 @@
 .display-linebreak {
     white-space: pre-line;
-    color: pink;
+    color: rgb(255, 148, 166);
     list-style-type: none;
     font-family: "Kirang Haerang", system-ui;
     font-weight: 400;
     font-style: normal;
     width: 50%;
+    position: relative;
+    z-index: 5;
     li {
         margin-bottom: 2em;
     }

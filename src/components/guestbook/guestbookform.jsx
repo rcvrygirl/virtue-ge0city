@@ -31,10 +31,9 @@ const GuestbookForm = () => {
 
   return (
     <form onSubmit={handleSubmit} className="guestbook-form">
-      <h2 className="teal-text">Sign the Guestbook</h2>
-      
+      <h2 className="clarity-text">Sign the Guestbook!</h2>
       <div className="form-group">
-        <label className="teal-text" htmlFor="name">Name:</label>
+        <label className="clarity-text" htmlFor="name">Name:</label>
         <input
           type="text"
           id="name"
@@ -45,7 +44,7 @@ const GuestbookForm = () => {
       </div>
 
       <div className="form-group">
-        <label className="teal-text" htmlFor="message">Message:</label>
+        <label className="clarity-text" htmlFor="message">Message:</label>
         <textarea
           id="message"
           value={message}
