@@ -1,9 +1,11 @@
 /* HallOfFame.scss */
+
 .hall-of-fame-container {
-    max-width: 1200px;
+    // max-width: 1200px;
     margin: 2rem auto;
     padding: 1rem;
-    background: lightblue;
+    background: rgb(252, 219, 224);
+    height: 100vh; /* Use min-height: 100vh if content exceeds screen */
   
     h1 {
       text-align: center;
@@ -32,7 +34,8 @@
     .phrase {
       font-size: 1.2rem;
       font-style: italic;
-      margin-bottom: 1rem;
+      margin: 4px;
+      margin-bottom: 2px;
       color: #333;
     }
   
@@ -46,7 +49,7 @@
       .vote-btn {
         background: none;
         border: none;
-        color: #ff4757;
+        color: #ab26c8;
         font-size: 1rem;
         cursor: pointer;
         padding: 0.3rem 0.8rem;
