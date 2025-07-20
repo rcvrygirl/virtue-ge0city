@@ -2,6 +2,7 @@ import { useState, useEffect } from "react";
 import { query, collection, orderBy, onSnapshot } from "firebase/firestore";
 import { db } from "../../config/firebase";
 import HallOfFameEntry from "./HallOfFameEntry";
+import './HallOfFame.scss'
 
 export default function HallOfFame() {
   const [entries, setEntries] = useState([]);
@@ -28,7 +29,7 @@ export default function HallOfFame() {
 
   return (
     <div className="hall-of-fame-container">
-      <h1>🌟 Community Hall of Fame</h1>
+      <h1>Community Hall of Fame</h1>
       {loading ? (
         <p>Loading top submissions...</p>
       ) : (

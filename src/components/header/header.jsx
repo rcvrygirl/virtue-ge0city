@@ -37,37 +37,37 @@ const Header = () => {
     'tumblr': '/tumblr'
   };
 
-  // Set page title based on current route
-  useEffect(() => {
-    const getPageTitle = () => {
-      // Get the current path
-      const currentPath = location.pathname;
+  // // Set page title based on current route
+  // useEffect(() => {
+  //   const getPageTitle = () => {
+  //     // Get the current path
+  //     const currentPath = location.pathname;
 
-      // Check for home route
-      if (currentPath === '/') return 'Home Planet';
+  //     // Check for home route
+  //     if (currentPath === '/') return 'Home Planet';
 
-      // Find matching nav item
-      const matchedItem = navItems.find(item => {
-        const linkPath = item.text.toLowerCase().replace(/ /g, '');
-        const routerPath = pathMapping[linkPath];
-        return currentPath === routerPath;
-      });
+  //     // Find matching nav item
+  //     const matchedItem = navItems.find(item => {
+  //       const linkPath = item.text.toLowerCase().replace(/ /g, '');
+  //       const routerPath = pathMapping[linkPath];
+  //       return currentPath === routerPath;
+  //     });
 
-      return matchedItem?.text || 'Home Planet';
-    };
+  //     return matchedItem?.text || 'Home Planet';
+  //   };
 
-    setPageTitle(getPageTitle());
-  }, [location.pathname]);
+  //   setPageTitle(getPageTitle());
+  // }, [location.pathname]);
 
   return (
     <header className="header">
       <div className="header__container">
-        {/* Page Title */}
+        {/* Page Title
         <div className="header__title-wrapper">
     <div className="header__page-title">
       {pageTitle}
     </div>
-  </div>
+  </div> */}
 
         {/* Logo */}
         <div className="header__logo">
