@@ -19,9 +19,9 @@ const Guestbook = () => {
       <div className="guestbook-content">
         <GuestBookForm />
         <GuestbookEntries />
-        <img src={witch} />
       </div>
     </div>
+    {/* <img src={witch} className="witch" /> */}
     </Loader>
     </>
   );
