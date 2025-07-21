@@ -7,6 +7,8 @@
 }
 
 .saved-phrases {
+  //revisit when adjusting saved phrases mobile screen
+  // top: 0;
     float: right;
     h3 {
         margin: 4px;
@@ -107,7 +109,7 @@
     align-items: flex-start; /* Changed from center to flex-start */
     min-height: calc(100vh - 120px); /* Accounts for header height */
     padding: 1rem;
-    background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
+    // background: linear-gradient(135deg, #f5f7fa 0%, #c3cfe2 100%);
     box-sizing: border-box; /* Ensures padding is included in height calc */
     
 .generator-card {
