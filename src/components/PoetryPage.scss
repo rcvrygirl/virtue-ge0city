@@ -63,6 +63,9 @@ body {
     background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../assets/pinkhairgirl.jpg');
+      background-attachment: fixed; /* Optional: Creates parallax effect */
+      background-repeat: no-repeat;
+    background-color: black;
   }
 }
 
