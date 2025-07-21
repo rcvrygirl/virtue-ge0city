@@ -34,7 +34,15 @@ h1 {
 }
 
 body {
-  background: rgb(10, 1, 1);
+  // background: rgb(10, 1, 1);
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/pinkhairgirl.jpg') center/cover no-repeat;
+      /* Magic combination */
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed; /* Optional: Creates parallax effect */
 }
 
 // body { 
