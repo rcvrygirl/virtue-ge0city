@@ -6,7 +6,7 @@ import './PoetryPage.scss'
 
 function PoetryPage() {
     return (
-        <div>
+        <div className="p-page">
             <h1><a className="title" href="/">Berry me in the realm of release...</a></h1>
             <img className="chi" src={chiStar} width="300" />
             <Poetry></Poetry>
