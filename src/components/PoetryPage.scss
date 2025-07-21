@@ -46,9 +46,9 @@ body { background:
   width: 100vw;
   height: 100vh; /* Use min-height: 100vh if content exceeds screen */
   @media (max-width: 768px) {
-    width: 100%;
-    min-width: 100%;
-    height: auto;
+    // width: 100%;
+    // min-width: 100%;
+    // height: auto;
   }
 }
 
