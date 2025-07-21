@@ -28,6 +28,7 @@ export default function HallOfFame() {
   }, []);
 
   return (
+    <>
     <div className="hall-of-fame-container">
       <h1>Community Hall of Fame</h1>
       {loading ? (
@@ -40,5 +41,7 @@ export default function HallOfFame() {
         </div>
       )}
     </div>
+    <div className="spacer"></div>
+    </>
   );
 }
