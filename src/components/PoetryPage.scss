@@ -1,4 +1,7 @@
 .p-page {
+  .spacer {
+    height: 30px;
+  }
   .chi {
     float: right;
     position: fixed;
@@ -12,10 +15,16 @@
 }
 
 h1 {
-  margin-left: 40px !important;
-  top: 0;
-  margin: 4px;
-  text-shadow: 1px 1px 2px black;
+  // top: 0;
+  // padding-top: 12px;
+  // float: right;
+  // margin: 6px;
+  text-shadow: 2px 1px 2px black;
+  text-align: center;
+
+  @media (max-width: 768px) {
+    padding-top: 0px;
+  }
 }
 
 .title {
@@ -48,18 +57,19 @@ body { background:
     h1 {
       text-align: center;
     }
+    display: hidden;
   }
 }
-@media (max-width: 768px) {
-  h1 {
-    text-align: center;
-  }
-}
+// @media (max-width: 768px) {
+//   h1 {
+//     text-align: center;
+//   }
+// }
 
-.p-page {
-  .mobile {
-    @media (max-width: 768px) {
-      display: hidden;
-    }
-  }
-}
+// .p-page {
+//   .mobile {
+//     @media (max-width: 768px) {
+//       display: hidden;
+//     }
+//   }
+// }

@@ -11,6 +11,7 @@ function PoetryPage() {
             <img className="chi" src={chiStar} width="300" />
             <Poetry></Poetry>
             <Track classname="mobile" trackId="1"></Track>
+            <div className="spacer"></div>
         </div>
     )
 
