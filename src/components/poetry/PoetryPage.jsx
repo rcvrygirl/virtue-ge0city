@@ -1,6 +1,6 @@
-import Poetry from './poetry/poetry.jsx'
-import Track from './audio/tracks.jsx'
-import chiStar from '../assets/chi-and-a-star.png'
+import Poetry from './poetry.jsx'
+import Track from '../audio/tracks.jsx'
+import chiStar from '../../assets/chi-and-a-star.png'
 import './PoetryPage.scss'
 
 

@@ -1,5 +1,5 @@
 import './App.css';
-import PoetryPage from './components/PoetryPage';
+import PoetryPage from './components/poetry/PoetryPage.jsx';
 import './index.css'
 import Header from './components/header/header.jsx'
 import { Suspense } from 'react'
