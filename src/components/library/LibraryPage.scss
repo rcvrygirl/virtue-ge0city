@@ -1,3 +1,9 @@
+.spacer-lib {
+    height: 16px;
+    @media (max-width: 768px) {
+        height: 0px;
+    }
+}
 .library-container {
     display: flex;
     margin-top: 20px;

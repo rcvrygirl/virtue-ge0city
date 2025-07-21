@@ -6,12 +6,15 @@ import Loader from '../loader/Loader.jsx'
 
 function LibraryPage() {
     return (
+        <>
         <div>
             <Loader>
             <Header />
             <Library/>
+            <div className="spacer-lib"></div>
             </Loader>
         </div>
+        </>
     )
 
 }
