@@ -21,8 +21,10 @@
     z-index: 9999;
     transition: opacity 0.5s ease-out;
     @media (max-width: 768px) {
-        width: 100%;
-        min-width: 100%;
+        // width: 100%;
+        // min-width: 100%;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../../assets/pinkhairgirl.jpg');
     }
   }
   

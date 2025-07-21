@@ -33,9 +33,21 @@ h1 {
 
 }
 
-body {
-  // background: rgb(10, 1, 1);
-    background: 
+// body {
+//   // background: rgb(10, 1, 1);
+//     background: 
+//     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+//     url('../assets/pinkhairgirl.jpg');
+//       /* Magic combination */
+//   // background-size: cover;
+//   // background-position: center;
+//   // background-repeat: no-repeat;
+//   // background-attachment: fixed; /* Optional: Creates parallax effect */
+//   // width: 100%;
+// }
+
+body { 
+  background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('../assets/pinkhairgirl.jpg') center/cover no-repeat;
       /* Magic combination */
@@ -43,27 +55,16 @@ body {
   background-position: center;
   background-repeat: no-repeat;
   background-attachment: fixed; /* Optional: Creates parallax effect */
-}
-
-// body { 
-//   background: 
-//     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
-//     url('../assets/pinkhairgirl.jpg') center/cover no-repeat;
-//       /* Magic combination */
-//   background-size: cover;
-//   background-position: center;
-//   background-repeat: no-repeat;
-//   background-attachment: fixed; /* Optional: Creates parallax effect */
   
-//   /* Ensure full viewport coverage */
-//   width: 100vw;
-//   height: 100vh; /* Use min-height: 100vh if content exceeds screen */
-//   @media (max-width: 768px) {
-//     // width: 100%;
-//     // min-width: 100%;
-//     // height: auto;
-//   }
-// }
+  /* Ensure full viewport coverage */
+  width: 100vw;
+  height: 100vh; /* Use min-height: 100vh if content exceeds screen */
+  @media (max-width: 768px) {
+    background: 
+    linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('../assets/pinkhairgirl.jpg');
+  }
+}
 
 .p-page {
   @media (max-width: 768px) {
