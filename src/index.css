@@ -23,8 +23,3 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
-
-/* Ensure no other elements have background styles */
-html, #root, .App {
-  background: transparent !important;
-}
