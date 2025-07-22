@@ -1,5 +1,6 @@
 .p-page {
 
+  width: 100%;
   .spacer {
     height: 30px;
   }
@@ -64,8 +65,8 @@ h1 {
       text-align: center;
     }
     display: hidden;
-    background: transparent;
-    isolation: isolate;
+    // background: transparent;
+    // isolation: isolate;
     // background: black;
   }
 }
