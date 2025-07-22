@@ -5,11 +5,13 @@
 }
 
 .hall-of-fame-container {
-    isolation: isolate;
+    // isolation: isolate;
     // max-width: 1200px;
     margin: 2rem auto;
     padding: 1rem;
     background: rgb(252, 219, 224, 50%);
+    background-blend-mode: normal; // Explicitly set
+    isolation: isolate; // Prevents blending with body bg
     min-height: 100vh; /* Use min-height: 100vh if content exceeds screen */
     border-radius: 25px;
     width: 85%;
