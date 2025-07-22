@@ -221,7 +221,7 @@ const WordGenerator = () => {
                 />
                 Noun + Preposition + Adjective + Noun
               </label>
-              
+              <br></br>
               <label>
                 <input
                   type="radio"
@@ -232,6 +232,7 @@ const WordGenerator = () => {
                 />
                 Adjective + Noun
               </label>
+              <br></br>
               <label>
                 <input
                   type="radio"
@@ -253,6 +254,7 @@ const WordGenerator = () => {
                 />
                 Noun + Preposition + Noun
               </label>
+              <br></br>
               <label>
                 <input
                   type="radio"
@@ -263,6 +265,7 @@ const WordGenerator = () => {
                 />
                 Noun + Noun
               </label>
+              <br></br>
               <label>
                 <input
                   type="radio"
