@@ -64,9 +64,9 @@ h1 {
       text-align: center;
     }
     display: hidden;
-    // background: black;
-    // background-color: green;
     background: transparent;
+    isolation: isolate;
+    // background: black;
   }
 }
 // @media (max-width: 768px) {
