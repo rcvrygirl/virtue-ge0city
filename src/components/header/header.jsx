@@ -10,6 +10,7 @@ import generator from '../../assets/left-clover.png'
 import { useLocation } from 'react-router-dom';
 
 import './header.scss'; // SCSS styles
+import SolarTerm from '../chinese-calendar/SolarTerm';
 
 const Header = () => {
   const isScrolled = useScroll();
@@ -27,15 +28,57 @@ const Header = () => {
     { id: 3, text: 'Tumblr', bgImage: tumblr},
   ];
 
-  // Map of text-to-router paths for proper matching
+  // // // Map of text-to-router paths for proper matching
+  // const pathMapping = {
+  //   'homeplanet': '/',
+  //   'yugiohpoetrygenerator': '/yugiohpoetrygenerator',
+  //   'halloffame': '/halloffame',
+  //   'guestbook': '/guestbook',
+  //   'library': '/library',
+  //   'tumblr': '/tumblr'
+  // };
   const pathMapping = {
-    'homeplanet': '/',
-    'yugiohpoetrygenerator': '/yugiohpoetrygenerator',
-    'halloffame': '/halloffame',
-    'guestbook': '/guestbook',
-    'library': '/library',
-    'tumblr': '/tumblr'
+    '/': {
+      id: 'homeplanet',
+      title: 'hey'
+    },
+    '/yugiohpoetrygenerator': {
+      id: 'yugiohpoetrygenerator', 
+      title: 'Yugioh Poetry Generator'
+    },
+    '/halloffame': {
+      id: 'halloffame',
+      title: 'Hall of Fame'
+    },
+    '/guestbook': {
+      id: 'guestbook',
+      title: 'Guest Book'
+    },
+    '/library': {
+      id: 'library',
+      title: 'Library'
+    },
+    '/tumblr': {
+      id: 'tumblr',
+      title: 'Image Gallery'
+    }
   };
+
+  // Updated useEffect hook to use the new mapping
+useEffect(() => {
+  const currentPath = location.pathname;
+  const routeData = pathMapping[currentPath] || {
+    title: '', // Default fallback
+    id: 'homeplanet'
+  };
+  
+  setPageTitle(routeData.title);
+  
+  // If you still need the ID for other functionality:
+  // const routeId = routeData.id;
+  
+}, [location.pathname]);
+
 
   // // Set page title based on current route
   // useEffect(() => {
@@ -53,7 +96,7 @@ const Header = () => {
   //       return currentPath === routerPath;
   //     });
 
-  //     return matchedItem?.text || 'Home Planet';
+  //     return matchedItem?.text || '';
   //   };
 
   //   setPageTitle(getPageTitle());
@@ -62,12 +105,13 @@ const Header = () => {
   return (
     <header className="header">
       <div className="header__container">
-        {/* Page Title
         <div className="header__title-wrapper">
     <div className="header__page-title">
-      {pageTitle}
+      {/* {pageTitle} */}
+      <SolarTerm />
     </div>
-  </div> */}
+  </div>
+
 
         {/* Logo */}
         <div className="header__logo">

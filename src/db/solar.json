@@ -1,0 +1,194 @@
+[
+{
+"englishTitle": "Lichun (Beginning of Spring)",
+"chineseTitle": "立春 / 立春",
+"date2025": "February 3, 2025",
+"date2026": "February 4, 2026",
+"iso_format2025": "2025-02-03",
+"iso_format2026": "2026-02-04"
+},
+{
+"englishTitle": "Yushui (Rain Water)",
+"chineseTitle": "雨水 / 雨水",
+"date2025": "February 18, 2025",
+"date2026": "February 18, 2026",
+"iso_format2025": "2025-02-18",
+"iso_format2026": "2026-02-18"
+},
+{
+"englishTitle": "Jingzhe (Awakening of Insects)",
+"chineseTitle": "惊蛰 / 驚蟄",
+"date2025": "March 5, 2025",
+"date2026": "March 6, 2026",
+"iso_format2025": "2025-03-05",
+"iso_format2026": "2026-03-06"
+},
+{
+"englishTitle": "Chunfen (Spring Equinox)",
+"chineseTitle": "春分 / 春分",
+"date2025": "March 20, 2025",
+"date2026": "March 20, 2026",
+"iso_format2025": "2025-03-20",
+"iso_format2026": "2026-03-20"
+},
+{
+"englishTitle": "Qingming (Clear and Bright)",
+"chineseTitle": "清明 / 清明",
+"date2025": "April 4, 2025",
+"date2026": "April 5, 2026",
+"iso_format2025": "2025-04-04",
+"iso_format2026": "2026-04-05"
+},
+{
+"englishTitle": "Guyu (Grain Rain)",
+"chineseTitle": "谷雨 / 穀雨",
+"date2025": "April 20, 2025",
+"date2026": "April 20, 2026",
+"iso_format2025": "2025-04-20",
+"iso_format2026": "2026-04-20"
+},
+{
+"englishTitle": "Lixia (Beginning of Summer)",
+"chineseTitle": "立夏 / 立夏",
+"date2025": "May 5, 2025",
+"date2026": "May 5, 2026",
+"iso_format2025": "2025-05-05",
+"iso_format2026": "2026-05-05"
+},
+{
+"englishTitle": "Xiaoman (Grain Buds)",
+"chineseTitle": "小满 / 小滿",
+"date2025": "May 21, 2025",
+"date2026": "May 21, 2026",
+"iso_format2025": "2025-05-21",
+"iso_format2026": "2026-05-21"
+},
+{
+"englishTitle": "Mangzhong (Grain in Ear)",
+"chineseTitle": "芒种 / 芒種",
+"date2025": "June 5, 2025",
+"date2026": "June 5, 2026",
+"iso_format2025": "2025-06-05",
+"iso_format2026": "2026-06-05"
+},
+{
+"englishTitle": "Xiazhi (Summer Solstice)",
+"chineseTitle": "夏至 / 夏至",
+"date2025": "June 21, 2025",
+"date2026": "June 21, 2026",
+"iso_format2025": "2025-06-21",
+"iso_format2026": "2026-06-21"
+},
+{
+"englishTitle": "Xiaoshu (Minor Heat)",
+"chineseTitle": "小暑 / 小暑",
+"date2025": "July 7, 2025",
+"date2026": "July 7, 2026",
+"iso_format2025": "2025-07-07",
+"iso_format2026": "2026-07-07"
+},
+{
+"englishTitle": "Dashu (Major Heat)",
+"chineseTitle": "大暑 / 大暑",
+"date2025": "July 22, 2025",
+"date2026": "July 23, 2026",
+"iso_format2025": "2025-07-22",
+"iso_format2026": "2026-07-23"
+},
+{
+"englishTitle": "Liqiu (Beginning of Autumn)",
+"chineseTitle": "立秋 / 立秋",
+"date2025": "August 7, 2025",
+"date2026": "August 7, 2026",
+"iso_format2025": "2025-08-07",
+"iso_format2026": "2026-08-07"
+},
+{
+"englishTitle": "Chushu (End of Heat)",
+"chineseTitle": "处暑 / 處暑",
+"date2025": "August 23, 2025",
+"date2026": "August 23, 2026",
+"iso_format2025": "2025-08-23",
+"iso_format2026": "2026-08-23"
+},
+{
+"englishTitle": "Bailu (White Dew)",
+"chineseTitle": "白露 / 白露",
+"date2025": "September 7, 2025",
+"date2026": "September 7, 2026",
+"iso_format2025": "2025-09-07",
+"iso_format2026": "2026-09-07"
+},
+{
+"englishTitle": "Qiufen (Autumn Equinox)",
+"chineseTitle": "秋分 / 秋分",
+"date2025": "September 23, 2025",
+"date2026": "September 23, 2026",
+"iso_format2025": "2025-09-23",
+"iso_format2026": "2026-09-23"
+},
+{
+"englishTitle": "Hanlu (Cold Dew)",
+"chineseTitle": "寒露 / 寒露",
+"date2025": "October 8, 2025",
+"date2026": "October 8, 2026",
+"iso_format2025": "2025-10-08",
+"iso_format2026": "2026-10-08"
+},
+{
+"englishTitle": "Shuangjiang (Frost's Descent)",
+"chineseTitle": "霜降 / 霜降",
+"date2025": "October 23, 2025",
+"date2026": "October 23, 2026",
+"iso_format2025": "2025-10-23",
+"iso_format2026": "2026-10-23"
+},
+{
+"englishTitle": "Lidong (Beginning of Winter)",
+"chineseTitle": "立冬 / 立冬",
+"date2025": "November 7, 2025",
+"date2026": "November 7, 2026",
+"iso_format2025": "2025-11-07",
+"iso_format2026": "2026-11-07"
+},
+{
+"englishTitle": "Xiaoxue (Minor Snow)",
+"chineseTitle": "小雪 / 小雪",
+"date2025": "November 22, 2025",
+"date2026": "November 22, 2026",
+"iso_format2025": "2025-11-22",
+"iso_format2026": "2026-11-22"
+},
+{
+"englishTitle": "Daxue (Major Snow)",
+"chineseTitle": "大雪 / 大雪",
+"date2025": "December 7, 2025",
+"date2026": "December 7, 2026",
+"iso_format2025": "2025-12-07",
+"iso_format2026": "2026-12-07"
+},
+{
+"englishTitle": "Dongzhi (Winter Solstice)",
+"chineseTitle": "冬至 / 冬至",
+"date2025": "December 21, 2025",
+"date2026": "December 22, 2026",
+"iso_format2025": "2025-12-21",
+"iso_format2026": "2026-12-22"
+},
+{
+"englishTitle": "Xiaohan (Minor Cold)",
+"chineseTitle": "小寒 / 小寒",
+"date2025": "January 5, 2026",
+"date2026": "January 5, 2027",
+"iso_format2025": "2026-01-05",
+"iso_format2026": "2027-01-05"
+},
+{
+"englishTitle": "Dahan (Major Cold)",
+"chineseTitle": "大寒 / 大寒",
+"date2025": "January 20, 2026",
+"date2026": "January 20, 2027",
+"iso_format2025": "2026-01-20",
+"iso_format2026": "2027-01-20"
+}
+]
