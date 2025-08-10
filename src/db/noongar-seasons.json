@@ -1,0 +1,40 @@
+{
+  "seasons": [
+    {
+      "title": "Birak",
+      "subtitle": "Season of the Young",
+      "months": ["December", "January"],
+      "description": "first summer, dry and hot"
+    },
+    {
+      "title": "Bunuru",
+      "subtitle": "Season of Adolescence",
+      "months": ["February", "March"],
+      "description": "the second summer, hottest part of the year"
+    },
+    {
+      "title": "Djeran",
+      "subtitle": "Season of Adulthood",
+      "months": ["April", "May"],
+      "description": "cooler weather begins"
+    },
+    {
+      "title": "Makuru",
+      "subtitle:": "Fertility Season",
+      "months": ["June", "July"],
+      "description": "coldest and wettest time of the year"
+    },
+    {
+      "title": "Djilba",
+      "subtitle": "Season of Conception",
+      "months": ["August", "September"],
+      "description": "transitional time / mix of cold and clear, warmer and rainy days"
+    },
+    {
+      "title": "Kambarang",
+      "subtitle": "Season of Birth",
+      "months": ["October", "November"],
+      "description": "longer, dryer days - wildflowers bloom"
+    }
+  ]
+}
