@@ -475,7 +475,24 @@
       "theology",
       "wings",
       "aura",
-      "rune"
+      "rune",
+      "seed",
+      "profile",
+      "rock",
+      "effect",
+      "pacific",
+      "knots",
+      "nature",
+      "seafoam",
+      "bubbles",
+      "sage",
+      "smoke",
+      "shadow-mancer",
+      "stiches",
+      "symbol",
+      "occult",
+      "la loba",
+      "island"
     ],
     "adjectives": [
       "blue",
@@ -597,7 +614,8 @@
       "unbidden",
       "unbitten",
       "starry",
-      "clannad"
+      "clannad",
+      "broken"
     ],
     "verbs": [
       "force",
@@ -657,7 +675,8 @@
       "equal",  
       "forget",  
       "turn",  
-      "weird"  
+      "weird",
+      "doubling"  
     ],
     "prepositions": [
       "with",
@@ -667,7 +686,12 @@
       "from",
       "to be",
       "for",
-      "of the"
+      "of the",
+      "la",
+      "ego-sum",
+      "plus",
+      "minus",
+      "where"
     ]
   }
 }
