@@ -718,7 +718,13 @@
       "knightmare",
       "tutu",
       "sunvine",
-      "machine angel"
+      "machine angel",
+      "eclipse",
+      "ode",
+      "medica",
+      "materia",
+      "minerva",
+      "variable"
     ],
     "adjectives": [
       "blue",
@@ -861,7 +867,10 @@
       "epic",
       "intelligent",
       "enduring",
-      "inherited"
+      "inherited",
+      "digital",
+      "solar",
+      "lunar"
     ],
     "verbs": [
       "force",
@@ -930,7 +939,8 @@
       "subtract",
       "endure",
       "archiving",
-      "transfer"
+      "transfer",
+      "merge"
     ],
     "prepositions": [
       "with",
