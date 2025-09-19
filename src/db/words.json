@@ -727,7 +727,23 @@
       "variable",
       "tribute",
       "veins",
-      "sealskin"
+      "sealskin",
+      "covenant",
+      "coven",
+      "clue",
+      "innocence",
+      "incantation",
+      "doctrine",
+      "moonstone",
+      "flower-blossom-itis",
+      "collective",
+      "apprentice",
+      "apprenticeship",
+      "child",
+      "vaccine",
+      "POV",
+      "ID",
+      "chapter"
     ],
     "adjectives": [
       "blue",
@@ -873,7 +889,14 @@
       "inherited",
       "digital",
       "solar",
-      "lunar"
+      "lunar",
+      "bio-",
+      "true",
+      "innocent",
+      "unknown",
+      "gothic-lolita",
+      "garnet",
+      "second"
     ],
     "verbs": [
       "force",
@@ -943,7 +966,13 @@
       "endure",
       "archiving",
       "transfer",
-      "merge"
+      "merge",
+      "play",
+      "composing",
+      "killed",
+      "mixed",
+      "collect",
+      "awakening"
     ],
     "prepositions": [
       "with",
