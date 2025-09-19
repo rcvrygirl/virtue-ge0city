@@ -11,6 +11,9 @@ export default function ErrorPage() {
   return (
     <>
     <Header />
+    <div className="spacer-lib"></div>
+    <div className="spacer-lib"></div>
+    <div className="spacer-lib"></div>
     <div className="error-page">
       <Snowfall 
         snowflakeCount={100}
