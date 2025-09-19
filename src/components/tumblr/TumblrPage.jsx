@@ -10,6 +10,7 @@ function TumblrPage() {
         <div>
             <Loader>
             <Header />
+            <div className="spacer"></div>
             <Tumblr />
             </Loader>
         </div>
