@@ -1,7 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Kirang+Haerang&display=swap');
 
+@font-face {
+  font-family: 'GothicBirthdayCake';
+  src: local("GothicBirthdayCake"),url('./fonts/Gothic_Birthday_Cake.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'CelticMd';
+  src: local("CelticMd"),url('./fonts/celticmd.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'Elven';
+  src: local("Elven"),url('./fonts/elvencommonspeak.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
 * {
   font-family: "Kirang Haerang", system-ui;
+  /* font-family: "Times New Roman", Times, serif; */
   /* cursor: url('./assets/clover.png'), 10 10, auto;
   a:hover {
     cursor: url('./assets/spatter.png'), 10 10, auto;
@@ -18,27 +43,34 @@
 }
 
 
-
-code {
+/* code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+} */
+
+body:before{
+    z-index:-10;
+    position: fixed;
+    content: "";
+    background-image: url('./assets/polkapurple.jpg');
+    opacity:0.3;
+     width: 100vw;
+  height: 100vh;
+  
 }
 
 body { 
   margin: 0;
-  isolation: isolate;
+  /* isolation: isolate; */
   background: 
     linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
     url('./assets/pinkhairgirl.jpg') center/cover no-repeat;
-      /* Magic combination */
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
-  background-attachment: fixed; /* Optional: Creates parallax effect */
-  
-  /* Ensure full viewport coverage */
+  background-attachment: fixed;
   width: 100vw;
-  height: 100vh; /* Use min-height: 100vh if content exceeds screen */
+  height: 100vh;
 
   @media (max-width: 768px) {
 
