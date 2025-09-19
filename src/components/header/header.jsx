@@ -98,7 +98,7 @@ const Header = () => {
                 }`}
                 style={{ 
                   '--bg-image': `url(${item.bgImage})`,
-                  '--text-color': '#fff',
+                  '--text-color': '#ADD8E6',
                 }}
               >
                 <a href={`${item.text.toLowerCase().replace(/ /g, '')}`}>
