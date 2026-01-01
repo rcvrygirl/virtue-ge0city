@@ -48,17 +48,6 @@
     monospace;
 } */
 
-body:before{
-    z-index:-10;
-    position: fixed;
-    content: "";
-    background-image: url('./assets/polkapurple.jpg');
-    opacity:0.3;
-     width: 100vw;
-  height: 100vh;
-  
-}
-
 body { 
   margin: 0;
   /* isolation: isolate; */
