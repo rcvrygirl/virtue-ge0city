@@ -81,8 +81,16 @@ const WordGenerator = () => {
           break;
         case 'verb-noun-noun':
           phrase = `${generateRandomWord('verbs')} ${generateRandomWord('nouns')} ${generateRandomWord('nouns')}`;
-            break;                  
-          
+            break;       
+        case 'adlib1':
+          phrase = `Be ${generateRandomWord('adjectives')} when ${generateRandomWord('nouns')} and ${generateRandomWord('nouns')}s are ${generateRandomWord('verbs')}`;
+            break;  
+        case 'adlib2':
+          phrase = `Pray to your guide ${generateRandomWord('nouns')} -- for ${generateRandomWord('verbs')}`;
+            break;              
+        case 'adlib':
+          phrase = `A ${generateRandomWord('nouns')} of ${generateRandomWord('nouns')}s ${generateRandomWord('verbs')} the ${generateRandomWord('adjectives')} of ${generateRandomWord('nouns')}. ${generateRandomWord('verbs')} here is ${generateRandomWord('verbs')} both  ${generateRandomWord('nouns')} and  ${generateRandomWord('nouns')}.`;
+            break;    
         default:
           phrase = `${generateRandomWord('adjectives')} ${generateRandomWord('nouns')}`;
       }
@@ -215,6 +223,37 @@ const WordGenerator = () => {
                 <input
                   type="radio"
                   name="structure"
+                  value="adlib"
+                  checked={phraseStructure === 'adlib'}
+                  onChange={() => setPhraseStructure('adlib')}
+                />
+                Adlib_1
+              </label>
+                            <label>
+                <input
+                  type="radio"
+                  name="structure"
+                  value="adlib1"
+                  checked={phraseStructure === 'adlib1'}
+                  onChange={() => setPhraseStructure('adlib1')}
+                />
+                Adlib_2
+              </label>
+                            <label>
+                <input
+                  type="radio"
+                  name="structure"
+                  value="adlib2"
+                  checked={phraseStructure === 'adlib2'}
+                  onChange={() => setPhraseStructure('adlib2')}
+                />
+                Adlib_3
+              </label>
+              <br></br>
+              <label>
+                <input
+                  type="radio"
+                  name="structure"
                   value="noun-preposition-adjective-noun"
                   checked={phraseStructure === 'noun-preposition-adjective-noun'}
                   onChange={() => setPhraseStructure('noun-preposition-adjective-noun')}
@@ -314,7 +353,7 @@ const WordGenerator = () => {
 
         {/* Saved Phrases Section */}
       {savedPhrases.length > 0 && (
-        <div className="saved-phrases">
+        <div className="saved-phrases" style={{width: '50%', float: 'right', margin: '18.72px'}}>
           <div className="section-header">
             <h3>Saved Phrases ({savedPhrases.length})</h3>
           </div>
@@ -399,7 +438,7 @@ const WordGenerator = () => {
                 </button>
                 </h3>
             </div>
-          <ul>
+          <ul style={{width: '50%'}}>
             {history.map((phrase, index) => (
               <li key={index}>
                 <span>{phrase}</span>
