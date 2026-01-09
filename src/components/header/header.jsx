@@ -75,8 +75,8 @@ const Header = () => {
       <div className="header__container">
         <div className="header__title-wrapper">
           <div className="header__page-title">
-            <NoongarSeason />
-            <SolarTerm />
+            {/* <NoongarSeason />
+            <SolarTerm /> */}
           </div>
         </div>
 
